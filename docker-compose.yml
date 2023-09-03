@@ -1,0 +1,54 @@
+version: "3"
+services:
+  node:
+    container_name: book_mgt_back
+    build:
+      context: ./Docker/node
+    ports:
+      - 3010:3010
+      - 4000:4000
+    volumes:
+      - ./src:/home/node/company_book_mgt/src/back
+    environment:
+      - NODE_ENV_DEVELOPMENT=development
+      - NODE_ENV_PRODUCTION=production
+    stdin_open: true
+    tty: true
+    env_file:
+      - .env
+
+  dev_db:
+    container_name: book_mgt_mysql
+    build: ./Docker/mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - book_mgt_dev_db_volume:/var/lib/mysql
+    environment:
+      TZ: "Asia/Tokyo"
+      MYSQL_ROOT_PASSWORD: ${ROOT_PASS}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_PASSWORD: ${DB_PASS}
+      MYSQL_USER: ${DB_USER}
+    hostname: mysql
+    restart: always
+    env_file:
+      - .env
+
+  nextjs:
+    container_name: nextjs_app
+    build:
+      context: ./Docker/nextjs
+    ports:
+      - 3011:3011
+    volumes:
+      - ./nextjs_app:/app
+    environment:
+      - NODE_ENV=development
+    stdin_open: true
+    tty: true
+    env_file:
+      - .env
+
+volumes:
+  book_mgt_dev_db_volume:
