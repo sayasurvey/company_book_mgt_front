@@ -8,7 +8,7 @@ services:
       - 3010:3010
       - 4000:4000
     volumes:
-      - ./src/back:/home/node/company_book_mgt/src
+      - ./src/back:/home/node
     environment:
       - NODE_ENV_DEVELOPMENT=development
       - NODE_ENV_PRODUCTION=production
@@ -35,14 +35,14 @@ services:
     env_file:
       - .env
 
-  nextjs:
+  next:
     container_name: front
     build:
       context: ./Docker/nextjs
     ports:
       - 3011:3011
     volumes:
-      - ./src/front:/home/nextjs/company_book_mgt/src/front
+      - ./src/front:/var/www
     environment:
       - NODE_ENV=development
     stdin_open: true
