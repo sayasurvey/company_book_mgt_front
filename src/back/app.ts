@@ -1,6 +1,6 @@
-import express, { Request, Response } from "express";
+import express, { Request, Response, Application } from "express";
 
-const app = express();
+export const app: Application = express();
 const port = 3010;
 
 app.get("/", (req: Request, res: Response) => {
