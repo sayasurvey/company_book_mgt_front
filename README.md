@@ -13,7 +13,7 @@ yarn watch
 ```
 - Next.jsのHello World実行
 ```
-docker compose exec nextjs sh
+docker compose exec next sh
 yarn
-yarn watch
+yarn dev
 ```
