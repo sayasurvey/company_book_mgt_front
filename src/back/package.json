@@ -19,7 +19,6 @@
   "scripts": {
     "start": "ts-node app.ts",
     "watch": "nodemon app.ts",
-    "gql": "nodemon app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
