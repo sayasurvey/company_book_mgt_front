@@ -3,7 +3,7 @@ interface InputFieldProps {
   dataName: string;
 };
 
-const InputField: React.FC<InputFieldProps> = ({ value, dataName} ) => {
+export const InputField: React.FC<InputFieldProps> = ({ value, dataName } ) => {
   return (
     <div>
       <div className="flex items-center justify-between">
@@ -22,5 +22,3 @@ const InputField: React.FC<InputFieldProps> = ({ value, dataName} ) => {
     </div>
   );
 }
-
-export default InputField;

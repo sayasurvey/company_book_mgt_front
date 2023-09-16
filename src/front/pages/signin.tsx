@@ -1,6 +1,6 @@
-import DefaultButton from '../components/default_button';
-import InputField from '../components/input_field';
-import Layout from '../components/layout';
+import { DefaultButton }  from '../components/default_button';
+import { InputField } from '../components/input_field';
+import { Layout}  from '../components/layout';
 
 const LoginForm = () => {
   return (
