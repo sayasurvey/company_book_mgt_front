@@ -11,19 +11,21 @@ interface BookCardProps extends Book {}
 
 function BookCard({ imageUrl, altText, title }: BookCardProps): ReactElement {
   return (
-    <a href="#" className="group border p-2 rounded-lg">
-      <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-        <img
-          src={imageUrl}
-          alt={altText}
-          className="h-96 w-full object-cover object-center group-hover:opacity-25"
-        />
-      </div>
-      <div className='flex border mt-2 rounded-lg'>
+    <div className='border rounded-lg'>
+      <a href="#" className="rounded-lg">
+        <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-tlg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img
+            src={imageUrl}
+            alt={altText}
+            className="h-[30rem] w-full rounded-t-lg object-cover object-center group-hover:opacity-25"
+          />
+        </div>
+      </a>
+      <div className='flex rounded-lg'>
         <a href="#" className="py-1 w-full text-center border-r">借りる</a>
         <a href="#" className="py-1 w-full text-center">借りたい</a>
       </div>
-    </a>
+    </div>
   );
 }
 
