@@ -7,7 +7,7 @@ interface ModalProps {
   onClose: () => void;
 }
 
-function Modal({ isOpen, onClose }: ModalProps): ReactElement | null {
+export const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
@@ -33,5 +33,3 @@ function Modal({ isOpen, onClose }: ModalProps): ReactElement | null {
     </div>
   );
 }
-
-export default Modal;

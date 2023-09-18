@@ -1,5 +1,5 @@
 import { ReactElement, useState } from 'react';
-import Modal from './modal';
+import { Modal } from './modal';
 
 interface Book {
   imageUrl: string;
@@ -43,7 +43,7 @@ function BookCard({ imageUrl, title, author, loanable }: BookCardProps): ReactEl
   );
 }
 
-function BookList(): ReactElement {
+export const BookList: React.FC = () => {
   const books: Book[] = [
     {
       imageUrl:
@@ -87,5 +87,3 @@ function BookList(): ReactElement {
     </div>
   );
 }
-
-export default BookList;

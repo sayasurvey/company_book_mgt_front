@@ -1,6 +1,6 @@
 import { Layout }  from '../components/layout';
-import BookList  from '../components/booklist';
-import {Title}  from '../components/title';
+import { BookList }  from '../components/booklist';
+import { Title }  from '../components/title';
 
 const LoginForm = () => {
   return (
