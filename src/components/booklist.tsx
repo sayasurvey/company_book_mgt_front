@@ -17,7 +17,7 @@ function BookCard({ imageUrl, title, author, loanable }: BookCardProps): ReactEl
         <div className="group relative aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-t-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
           <img
             src={imageUrl}
-            className="h-[20rem] w-full rounded-t-lg object-cover object-center group-hover:opacity-25"
+            className="sm:h-full md:h-[25rem] lg:h-[20rem] xl:h-[20rem] w-full rounded-t-lg object-cover object-center group-hover:opacity-25"
           />
           <div className='absolute top-5 left-5 opacity-0 group-hover:opacity-100'>
             <p>タイトル:</p>
