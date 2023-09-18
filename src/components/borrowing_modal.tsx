@@ -1,13 +1,12 @@
-import React, { ReactElement } from 'react';
 import { DefaultButton }  from './default_button';
 import { InputField } from './input_field';
 
-interface ModalProps {
+interface BorrowingModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
+export const BorrowingModal: React.FC<BorrowingModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (

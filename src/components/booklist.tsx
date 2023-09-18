@@ -1,5 +1,5 @@
 import { ReactElement, useState } from 'react';
-import { Modal } from './modal';
+import { BorrowingModal } from './borrowing_modal';
 
 interface Book {
   imageUrl: string;
@@ -38,7 +38,7 @@ function BookCard({ imageUrl, title, author, loanable }: BookCardProps): ReactEl
         <a onClick={handleBorrowClick} className={`py-1 w-full text-center border-r cursor-pointer ${loanable ? '' : 'text-gray-400 cursor-not-allowed'}`}>借りる</a>
         <a href="#" className="py-1 w-full text-center">借りたい</a>
       </div>
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <BorrowingModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }
