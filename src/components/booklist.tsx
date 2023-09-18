@@ -1,5 +1,5 @@
-import { ReactElement } from 'react';
-import { DefaultButton }  from './default_button';
+import { ReactElement, useState } from 'react';
+import Modal from './modal';
 
 interface Book {
   imageUrl: string;
@@ -11,6 +11,14 @@ interface Book {
 interface BookCardProps extends Book {}
 
 function BookCard({ imageUrl, title, author, loanable }: BookCardProps): ReactElement {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleBorrowClick = () => {
+    if (loanable) {
+      setIsModalOpen(true);
+    }
+  };
+
   return (
     <div className='border rounded-lg'>
       <a href="#" className="rounded-lg">
@@ -27,9 +35,10 @@ function BookCard({ imageUrl, title, author, loanable }: BookCardProps): ReactEl
         </div>
       </a>
       <div className='flex rounded-lg'>
-        <a href="#" className={`py-1 w-full text-center border-r ${loanable ? '' : 'text-gray-400 cursor-not-allowed'}`}>借りる</a>
+        <a onClick={handleBorrowClick} className={`py-1 w-full text-center border-r cursor-pointer ${loanable ? '' : 'text-gray-400 cursor-not-allowed'}`}>借りる</a>
         <a href="#" className="py-1 w-full text-center">借りたい</a>
       </div>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 }
