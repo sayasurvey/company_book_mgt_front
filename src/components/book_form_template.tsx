@@ -23,10 +23,6 @@ export const BookFormTemplate = () => {
           </div>
 
           <div>
-            <InputField value='著者' dataName='author'/>
-          </div>
-
-          <div>
             <InputField
               value='画像のURL'
               dataName='imageUrl'

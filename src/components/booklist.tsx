@@ -4,13 +4,12 @@ import { BorrowingModal } from './borrowing_modal';
 interface Book {
   imageUrl: string;
   title: string;
-  author: string;
   loanable: boolean;
 }
 
 interface BookCardProps extends Book {}
 
-function BookCard({ imageUrl, title, author, loanable }: BookCardProps): ReactElement {
+function BookCard({ imageUrl, title, loanable }: BookCardProps): ReactElement {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleBorrowClick = () => {
@@ -30,7 +29,6 @@ function BookCard({ imageUrl, title, author, loanable }: BookCardProps): ReactEl
           <div className='absolute top-5 left-5 opacity-0 group-hover:opacity-100'>
             <p>タイトル:</p>
             <p>　{title}</p>
-            <p>著者: {author}</p>
           </div>
         </div>
       </a>
@@ -49,28 +47,24 @@ export const BookList: React.FC = () => {
       imageUrl:
         'https://www.oreilly.co.jp/books/images/picture_large978-4-87311-565-8.jpeg',
       title: 'リーダブルコード',
-      author: 'Dustin Boswell',
       loanable: false
     },
     {
       imageUrl:
         'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg',
       title: 'Nomad Tumbler',
-      author: 'Dustin Boswell',
       loanable: true
     },
     {
       imageUrl:
         'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg',
       title: 'Focus Paper Refill',
-      author: 'Dustin Boswell',
       loanable: true
     },
     {
       imageUrl:
         'https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg',
       title: 'Machined Mechanical Pencil',
-      author: 'Dustin Boswell',
       loanable: true
     }
   ];
