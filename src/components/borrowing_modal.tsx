@@ -22,7 +22,7 @@ export const BorrowingModal: React.FC<BorrowingModalProps> = ({ isOpen, onClose 
             <DefaultButton value='借りる' type='submit'/>
             <button
               onClick={onClose}
-              className={`w-full border rounded-md bg-while py-1.5 text-sm font-semibold text-gray text-indigo-400 hover:bg-indigo-100 mt-1`}
+              className={`w-full border rounded-md bg-while py-1.5 text-sm font-semibold text-gray text-gray-400 hover:bg-gray-100 mt-1`}
             >
               閉じる
             </button>

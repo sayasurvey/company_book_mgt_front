@@ -12,10 +12,10 @@ export const BookFormTemplate = () => {
   };
 
   return (
-    <div className="h-screen w-screen flex justify-center items-center">
+    <div className="absolute inset-0 flex items-center justify-center">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">本の登録</h2>
+          <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-600">本の登録</h2>
         </div>
         <form className="space-y-6" action="#" method="POST">
           <div>

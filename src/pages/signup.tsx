@@ -5,10 +5,10 @@ import { Layout}  from '../components/layout';
 const SignupForm = () => {
   return (
     <Layout>
-      <div className="h-screen w-screen flex justify-center items-center">
+      <div className="absolute inset-0 flex items-center justify-center">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">アカウント作成</h2>
+            <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-600">アカウント作成</h2>
           </div>
           <form className="space-y-6" action="#" method="POST">
             <div>
@@ -31,7 +31,7 @@ const SignupForm = () => {
           </form>
 
           <p className="mt-3 text-center text-sm text-gray-500">
-            <a href="/signin" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">サインインはこちら</a>
+            <a href="/signin" className="font-semibold leading-6 text-gray-600 hover:text-gray-500">サインインはこちら</a>
           </p>
         </div>
       </div>
