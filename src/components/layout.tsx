@@ -1,4 +1,6 @@
 import { ReactNode } from 'react';
+import { Header } from './header'
+import { Footer } from './footer'
 
 interface LayoutProps {
   children: ReactNode;
@@ -6,8 +8,12 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="h-screen w-screen justify-center">
-      {children}
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-grow">
+        {children}
+      </main>
+      <Footer />
     </div>
   );
 }

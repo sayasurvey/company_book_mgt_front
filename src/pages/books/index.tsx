@@ -2,7 +2,7 @@ import { Layout }  from '../../components/layout';
 import { BookList }  from '../../components/booklist';
 import { Title }  from '../../components/title';
 
-const LoginForm = () => {
+const BooksForm = () => {
   return (
     <Layout>
       <Title value="本一覧"/>
@@ -11,4 +11,4 @@ const LoginForm = () => {
   );
 }
 
-export default LoginForm;
+export default BooksForm;

@@ -2,13 +2,13 @@ import { DefaultButton }  from '../components/default_button';
 import { InputField } from '../components/input_field';
 import { Layout}  from '../components/layout';
 
-const LoginForm = () => {
+const SigninForm = () => {
   return (
     <Layout>
-      <div className="h-screen w-screen flex justify-center items-center">
+      <div className="absolute inset-0 flex items-center justify-center">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">サインイン</h2>
+            <h2 className="text-center text-2xl font-bold leading-9 tracking-tight text-gray-600">サインイン</h2>
           </div>
           <form className="space-y-6" action="#" method="POST">
             <div>
@@ -27,7 +27,7 @@ const LoginForm = () => {
           </form>
 
           <p className="mt-3 text-center text-sm text-gray-500">
-            <a href="/signup" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">新規会員登録はこちら</a>
+            <a href="/signup" className="font-semibold leading-6 text-gray-600 hover:text-gray-500">新規会員登録はこちら</a>
           </p>
         </div>
       </div>
@@ -35,4 +35,4 @@ const LoginForm = () => {
   );
 }
 
-export default LoginForm;
+export default SigninForm;
